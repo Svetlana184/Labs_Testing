@@ -11,11 +11,22 @@
             {
                 kv += (v - average) * (v - average);
             }
-            return Math.Round(kv / mas.Length, x);
+            return Math.Round(Math.Sqrt(kv / mas.Length), x);
         }
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.AreEqual(0.82, Deviation([1, 2, 3], 2));
+        }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.AreEqual(0, Deviation([0,0,0], 2));
+        }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            Assert.AreEqual(4.92, Deviation([-5, 2, -10], 2));
         }
     }
 }
