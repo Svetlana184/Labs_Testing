@@ -26,21 +26,21 @@ namespace ConsoleApp
             }
             return sum;
         }
-        public int SumEven()
+        public int Even()
         {
             int sum = 0;
             foreach (int cute in cuteArray)
             {
-                if (cute % 2 == 0) sum += cute;
+                if (cute % 2 == 0) sum += 1;
             }
             return sum;
         }
-        public int SumNotEven()
+        public int NotEven()
         {
             int sum = 0;
             foreach (int cute in cuteArray)
             {
-                if (cute % 2 != 0) sum += cute;
+                if (cute % 2 != 0) sum += 1;
             }
             return sum;
         }
