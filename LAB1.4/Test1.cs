@@ -4,14 +4,46 @@
  * отсортировать массив в порядке возрастания методом быстрой сортировки
  */
 
+using ConsoleApp;
+using System.Threading;
+
 namespace LAB1._4
 {
+
     [TestClass]
-    public sealed class Test1
+    public class Test1
     {
         [TestMethod]
         public void TestMethod1()
         {
+            CuteArray cute = new([9, 5, 1, 4]);
+            cute.SortChoice();
+            int[] compareArr = [1, 4, 5, 9];
+            CollectionAssert.AreEqual(compareArr, cute.cuteArray);
+        }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            CuteArray cute = new([9, 5, 1, 4]);
+            cute.SortQuick();
+            int[] compareArr = [1, 4, 5, 9];
+            CollectionAssert.AreEqual(compareArr, cute.cuteArray);
+        }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            CuteArray cute = new([1,1,1]);
+            cute.SortChoice();
+            int[] compareArr = [1, 1, 1];
+            CollectionAssert.AreEqual(compareArr, cute.cuteArray);
+        }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            CuteArray cute = new([1, 1, 1]);
+            cute.SortQuick();
+            int[] compareArr = [1, 1, 1];
+            CollectionAssert.AreEqual(compareArr, cute.cuteArray);
         }
     }
 }
