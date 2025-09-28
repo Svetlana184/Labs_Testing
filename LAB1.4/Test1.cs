@@ -14,7 +14,7 @@ namespace LAB1._4
     public class Test1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodChoice()
         {
             CuteArray cute = new([9, 5, 1, 4]);
             cute.SortChoice();
@@ -22,7 +22,7 @@ namespace LAB1._4
             CollectionAssert.AreEqual(compareArr, cute.cuteArray);
         }
         [TestMethod]
-        public void TestMethod2()
+        public void TestMethodQuick()
         {
             CuteArray cute = new([9, 5, 1, 4]);
             cute.SortQuick();
@@ -30,7 +30,7 @@ namespace LAB1._4
             CollectionAssert.AreEqual(compareArr, cute.cuteArray);
         }
         [TestMethod]
-        public void TestMethod3()
+        public void TestMethodNegativeChoice()
         {
             CuteArray cute = new([1,1,1]);
             cute.SortChoice();
@@ -38,7 +38,7 @@ namespace LAB1._4
             CollectionAssert.AreEqual(compareArr, cute.cuteArray);
         }
         [TestMethod]
-        public void TestMethod4()
+        public void TestMethodNegativeQuick()
         {
             CuteArray cute = new([1, 1, 1]);
             cute.SortQuick();
